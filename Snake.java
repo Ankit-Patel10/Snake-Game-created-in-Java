@@ -14,33 +14,22 @@ import javax.swing.JFrame;
 import javax.swing.Timer;
 
 /**
- * @author Jaryt Bustard
+ * @author EulerLoop (AnkitPatel)
  */
 public class Snake implements ActionListener, KeyListener
 {
 
 	public static Snake snake;
-
 	public JFrame jframe;
-
 	public RenderPanel renderPanel;
-
 	public Timer timer = new Timer(20, this);
-
 	public ArrayList<Point> snakeParts = new ArrayList<Point>();
-
 	public static final int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3, SCALE = 10;
-
 	public int ticks = 0, direction = DOWN, score, tailLength = 10, time;
-
 	public Point head, cherry;
-
 	public Random random;
-
 	public boolean over = false, paused;
-
 	public Dimension dim;
-
 	public Snake()
 	{
 		dim = Toolkit.getDefaultToolkit().getScreenSize();
